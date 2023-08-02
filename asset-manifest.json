@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/AlQuran/static/css/main.923efc2b.css",
+    "main.js": "/AlQuran/static/js/main.5d396bc0.js",
+    "static/js/787.020cb931.chunk.js": "/AlQuran/static/js/787.020cb931.chunk.js",
+    "static/media/quran.png": "/AlQuran/static/media/quran.7557769d639a92f089a4.png",
+    "index.html": "/AlQuran/index.html",
+    "main.923efc2b.css.map": "/AlQuran/static/css/main.923efc2b.css.map",
+    "main.5d396bc0.js.map": "/AlQuran/static/js/main.5d396bc0.js.map",
+    "787.020cb931.chunk.js.map": "/AlQuran/static/js/787.020cb931.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.923efc2b.css",
+    "static/js/main.5d396bc0.js"
+  ]
+}
