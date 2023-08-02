@@ -1,0 +1,150 @@
+.surahInfos {
+  margin-top: 30px;
+  color: var(--light);
+}
+
+.surahInfos .title {
+  border: 1px solid currentColor;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-flow: row nowrap;
+  gap: 15px;
+  padding: 10px;
+  text-decoration: none;
+}
+
+.surahInfos .basmala {
+  text-align: center;
+  padding: 30px;
+  font-size: 25px;
+}
+
+.surahInfos ul {
+  list-style: none;
+  max-height: 50vh;
+  overflow: hidden;
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 5px;
+  overflow-y: scroll;
+}
+.surahInfos ul::-webkit-scrollbar {
+  display: none;
+}
+
+.surahInfos ul li {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 10px;
+  transition: 0.3s;
+  border-radius: 8px;
+  color: var(--light);
+  text-align: start;
+  direction: rtl;
+}
+.surahInfos ul li:hover {
+  background-color: var(--lightT);
+}
+
+.surahInfos ul li .ayah {
+  margin-right: 10px;
+  padding: 0 .5em;
+  display: inline-block;
+  position: relative;
+  font-size: 12px;
+}
+
+.surahInfos ul li .ayah::after {
+  content: "\06DD";
+  display: block;
+  position: absolute;
+  font-size: 25px;
+  top: 50%;
+  left: 50%;
+  transform: translate( -50%, -50%);
+}
+.surahInfos ul li button {
+  background-color: transparent;
+  color: var(--light);
+  border: none;
+  outline: none;
+  cursor: pointer;
+  position: relative;
+}
+
+.surahInfos ul li button::after {
+  content: "";
+  background-color: transparent;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.d-none {
+  display: none !important;
+}
+
+
+.surahInfos select {
+  background-color: var(--light);
+  border: thin solid var(--dark);
+  color: var(--dark);
+  border-radius: 4px;
+  display: inline-block;
+  font: inherit;
+  line-height: 1.5em;
+  padding: 0.5em 3.5em 0.5em 1em;
+  margin: 0;      
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  appearance: none;
+  width: 100%;
+  margin: 10px 0;
+}
+
+.surahInfos select {
+  background-image:
+    linear-gradient(45deg, transparent 50%, var(--gray) 50%),
+    linear-gradient(135deg, var(--gray) 50%, transparent 50%),
+    linear-gradient(to right, var(--gray), var(--gray));
+  background-position:
+    calc(100% - 20px) calc(1em + 2px),
+    calc(100% - 15px) calc(1em + 2px),
+    calc(100% - 2.5em) 0.5em;
+  background-size:
+    5px 5px,
+    5px 5px,
+    1px 1.5em;
+  background-repeat: no-repeat;
+}
+
+.surahInfos select:focus {
+  background-image:
+    linear-gradient(45deg, var(--green) 50%, transparent 50%),
+    linear-gradient(135deg, transparent 50%, var(--green) 50%),
+    linear-gradient(to right, var(--gray), var(--gray));
+  background-position:
+    calc(100% - 15px) 1em,
+    calc(100% - 20px) 1em,
+    calc(100% - 2.5em) 0.5em;
+  background-size:
+    5px 5px,
+    5px 5px,
+    1px 1.5em;
+  background-repeat: no-repeat;
+  border-color: var(--green);
+  outline: 0;
+}
+
+
+.surahInfos select:-moz-focusring {
+  color: transparent;
+  text-shadow: 0 0 0 var(--dark);
+}

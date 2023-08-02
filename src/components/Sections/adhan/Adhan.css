@@ -1,0 +1,43 @@
+.adhan {
+  margin-top: 50px;
+  color: var(--light);
+  padding-bottom: 30px;
+}
+.adhan div:has(table) {
+  margin-top: 30px;
+  overflow: hidden;
+  border-radius: 12px;
+  border: 1px solid var(--light);
+}
+.adhan div table {
+  width: 100%;
+  text-align: center;
+}
+
+.adhan div table tr {
+  background-color: var(--light);
+  color: var(--dark);
+  transition: 0.3s;
+}
+.adhan div table tr td {
+  padding: 15px 0;
+  user-select: none;
+}
+
+.adhan div table tr:not(:last-child) td {
+  border-bottom:  1px solid var(--dark);
+}
+.adhan div table tr:hover {
+  transform: scale(1.2);
+  background-color: var(--dark);
+  color: var(--light);
+}
+
+@media (max-width: 768px) {
+  .adhan h1 {
+    font-size: 25px;
+  }
+  .adhan h3 {
+    font-size: 18px;
+  }
+}

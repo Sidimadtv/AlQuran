@@ -1,0 +1,21 @@
+.playList div {
+  width: 100%;
+  border: 1px solid var(--light);
+  color: var(--light);
+  margin: 10px 0;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 10px;
+  font-size: 25px;
+  direction: ltr;
+  border-radius: 8px;
+}
+
+.playList div span {
+  white-space: nowrap;
+  padding: 0 10px;
+}
+.playList div audio {
+  flex: 1;
+}

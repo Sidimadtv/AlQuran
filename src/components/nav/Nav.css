@@ -1,0 +1,219 @@
+header {
+  color: var(--light);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 25px;
+  flex-flow: row nowrap;
+  background-color: var(--dark);
+}
+
+header .bars,
+header .slideBar .close {
+  color: var(--light);
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+header .logo {
+  display: flex;
+  flex-flow: row nowrap;
+  white-space: nowrap;
+  padding: 10px;
+  color: var(--light);
+  text-decoration: none;
+}
+
+header .slideBar {
+  padding-top: 50px;
+  color: var(--dark);
+  background-color: var(--light);
+  position: fixed;
+  width: 250px;
+  height: 100vh;
+  left: 0;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  z-index: 99999999999;
+  transition: 0.3s;
+}
+
+header .slideBar.hide {
+  transform: translateX(-100%);
+}
+
+header .slideBar .close {
+  position: absolute;
+  right: 0;
+  top: 0;
+  color: var(--dark);
+} 
+
+header .slideBar ul {
+  flex: 1;
+}
+header .slideBar ul li {
+  display: flex;
+}
+
+header .slideBar ul li a {
+  color: var(--dark);
+  background-color: transparent;
+  width: 100%;
+  padding: 10px;
+  text-decoration: none;
+  display: flex;
+  flex-flow: row nowrap;
+  gap: 10px;
+  align-items: center;
+  margin: 5px;
+  border-radius: 8px;
+  transition: 0.2s;
+}
+header .slideBar ul li a:active,
+header .slideBar ul li a:hover {
+  color: var(--light);
+  background-color: var(--darkT);
+}
+
+header .contact div {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+}
+header .contact div a {
+  color: var(--dark);
+}
+
+header .contact h4 {
+  font-size: 12px;
+  padding: 5px;
+  text-align: center;
+}
+
+
+@media (max-width: 768px) {
+  header .logo {
+    font-size: 16px;
+  }
+  header .logo img {
+    width: 30px;
+  }
+  header button.close svg,
+  header button.bars svg {
+    width: 35px !important;
+  }
+}
+
+/* -------------------------------------------------------------- */
+
+header .switch {
+  font-size: 17px;
+  position: relative;
+  display: inline-block;
+  width: 64px;
+  height: 34px;
+}
+
+header .switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+header .slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #73C0FC;
+  transition: .4s;
+  border-radius: 30px;
+}
+
+header .slider:before {
+  position: absolute;
+  content: "";
+  height: 30px;
+  width: 30px;
+  border-radius: 20px;
+  left: 2px;
+  bottom: 2px;
+  z-index: 2;
+  background-color: #e8e8e8;
+  transition: .4s;
+}
+
+.sun svg {
+  position: absolute;
+  top: 6px;
+  left: 36px;
+  z-index: 1;
+  width: 24px;
+  height: 24px;
+}
+
+header .moon svg {
+  fill: #73C0FC;
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  z-index: 1;
+  width: 24px;
+  height: 24px;
+}
+
+/* .switch:hover */.sun svg {
+  animation: rotate 15s linear infinite;
+}
+
+@keyframes rotate {
+ 
+  0% {
+    transform: rotate(0);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* .switch:hover */.moon svg {
+  animation: tilt 5s linear infinite;
+}
+
+@keyframes tilt {
+ 
+  0% {
+    transform: rotate(0deg);
+  }
+
+  25% {
+    transform: rotate(-10deg);
+  }
+
+  75% {
+    transform: rotate(10deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+header .input:checked + .slider {
+  background-color: #183153;
+}
+
+header .input:focus + .slider {
+  box-shadow: 0 0 1px #183153;
+}
+
+header .input:checked + .slider:before {
+  transform: translateX(30px);
+}

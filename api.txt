@@ -1,0 +1,7 @@
+https://alquran.cloud/
+https://api.alquran.cloud/v1/quran/ar.alafasy
+https://api.alquran.cloud/v1/surah/1/ar.alafasy
+https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/1.mp3
+https://api.alquran.cloud/v1/edition?format=audio&language=ar&type=versebyverse
+
+
